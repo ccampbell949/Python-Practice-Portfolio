@@ -1,6 +1,6 @@
 # Python-Practice-Portfolio
 # Hello
-#This is a series of personal Python projects to help me improve
+# This is a series of personal Python projects to help me improve
 # my skills as a coder.
 
 # My background is in Aerospace engineering, and had a little Python experience. 
