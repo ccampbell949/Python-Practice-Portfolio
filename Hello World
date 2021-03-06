@@ -1,4 +1,5 @@
 #This program says hello and asks for my name
+# It will then ask my age and tells me what age I will be in 1 year.
 
 print('Hello World!')
 print('What is your name?') #ask for their name
