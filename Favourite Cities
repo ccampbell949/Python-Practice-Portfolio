@@ -1,0 +1,8 @@
+# Displays my favourite cities
+
+def favourite_city(name): #Define function using "def", with variable "name" 
+	print('One of my favourite cities is ' +name) 
+
+favourite_city("Belfast")
+favourite_city("Portrush")
+favourite_city("Omagh")
