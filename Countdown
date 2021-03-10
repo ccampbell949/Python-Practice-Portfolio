@@ -1,0 +1,7 @@
+# This script runs a 'for' loop to countdown until Liftoff
+# range starts at 10 and increments down in 1's until it gets to 1, then dispplays 'Liftoff'
+
+print('Countdown')
+for i in range(10,0,-1):
+  print('T-minus'+ str(i))
+print('Lift-Off!')
