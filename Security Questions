@@ -1,0 +1,22 @@
+#This code requires the user to enter their name and answer 3 security questions
+#If any of the entries doe not match the stored info, the script will print 'Access Denied'
+#If all 4 entries match the stored values, the script will print 'Access Granted'
+#The stored values can be changed for different users and diferent security questions.
+A = 'Connor'
+B = '30'
+C = 'dog'
+D = 'blue'
+print('Enter Name')
+E=input()
+print ('Enter Age')
+F=input()
+print ('Enter favourite animal')
+G=input()
+print ('Enter favourite colour')
+H=input()
+
+if A == E and B == F and C == G and D == H:
+  
+  print('Access Granted')
+else:
+  print('Access Denied')
