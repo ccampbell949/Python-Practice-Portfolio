@@ -1,0 +1,5 @@
+def plusOne(number):  #define new function plusOne(x)
+  return number + 1   #returns "x" + 1
+newNumber = plusOne(5)  #assigns plusOne(5) to value 'newNumber'
+print(newNumber)      #prints the new number
+
