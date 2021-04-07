@@ -1,0 +1,13 @@
+import pprint #import pprint module. Only necessary if using pprint function.
+
+#any text can go inside the quote marks and Python will count it
+message = 'It was a cold day in Arpil, and the clocks were striking thirteen.'
+count = {}
+
+for character in message.upper():  #this converts all the letters in the message to upper case and then counts. Having just
+  count.setdefault(character, 0)   #'message' causes the programme to count upper and lower case letters seperately. 
+  count[character] = count[character] + 1
+
+pprint.pprint(count) #pprint 'pretty print' givesa structure to the output count list
+                     #having just 'print' give a count in a random order or the order
+                     #in which it encounters the letters.
