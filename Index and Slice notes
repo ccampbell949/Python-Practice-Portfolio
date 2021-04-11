@@ -1,0 +1,14 @@
+#Note that this is not a script, just notes
+
+
+#if spam = 'Hello World!'
+
+#spam[0] would return 'H'. This is an 'index'
+
+#spam[1:5] is a slice, and would return 'ello' i.e. starts at index 1, and goes
+#to index 4, as it stops one short of the end index given
+
+#spam[-1] would return '!' as the negative number goes from right to left
+
+#'Hello' in spam would evaluate to True
+
