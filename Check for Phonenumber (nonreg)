@@ -1,0 +1,24 @@
+#note this is for american phone numbers
+
+ def isPhoneNumber(text): #define function
+❶     if len(text) != 12: #Checks to see if the code is 12 characers
+           return False
+       for i in range(0, 3):  #checks the first 3 characters are numbers
+❷         if not text[i].isdecimal():
+               return False
+❸     if text[3] != '-':  #checks for the first hyphen
+           return False
+       for i in range(4, 7):
+❹         if not text[i].isdecimal(): #3 more numeric characters
+               return False
+❺     if text[7] != '-':  #checks for seceond hyphen
+           return False
+       for i in range(8, 12):
+❻         if not text[i].isdecimal(): #checks for the final 4 numbers
+               return False
+❼     return True #return true if programme gets through all checks
+
+   print('415-555-4242 is a phone number:')
+   print(isPhoneNumber('415-555-4242')) #prints the result of the programme using this text
+   print('Moshi moshi is a phone number:')
+   print(isPhoneNumber('Moshi moshi'))  #prints results of the programe using this text
