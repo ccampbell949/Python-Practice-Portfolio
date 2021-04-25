@@ -1,0 +1,29 @@
+import random #import 'random' module
+
+#create list of possible replies. Name 'eight_ball'
+
+eight_ball = [ "It is certain", "It is decidedly so", "Without a doubt", "Yes, definitely",
+               "You may rely on it", "As I see it, yes", "Most Likely", "Outlook Good",
+               "Yes", "Signs point to yes", "Reply hazy, try again", "Ask again later",
+               "Better not tell you now", "Cannot predict now", "Concentrate and ask again",
+               "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very Doubtful"]
+
+def question(): #define function 'question'
+    question = input("You may ask your yes or no question of the Magic 8 Ball!\n")#print text and ask for user input on a new line
+   
+    print(random.choice(eight_ball))#print a random response for the 'eight_ball' list
+
+
+#while True means loop forever. The while statement takes an expression and
+#executes the loop body while the expression evaluates to (boolean) "true".
+#True always evaluates to boolean "true" and thus executes the loop body
+#indefinitely.
+    
+while True:   
+    question() #return to original 'question'
+    repeat = input("Would you like to ask another question? (Y or N)")
+    #ask for input to ask another question. If the input isn't either Y or y,
+    #then print 'Come back......' and break the loop.
+    if not (repeat == "y" or repeat == "Y"):
+        print("Come back if you have more questions!")
+        break
