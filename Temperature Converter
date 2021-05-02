@@ -1,0 +1,49 @@
+#Convert Celcius to farhenheit and vice versa
+#Fahrenheit to Celsius, subtract 32 and multiply by . 5556 (or 5/9).
+
+
+#Programme starts at 'Would you like to convert another temperature?[Y/N]'
+#then moves to 'Would you like to convert to Fahrenheit or Celsius?[F/C]'
+#Should really only do this after the first time you run it. 
+
+def tempConvert():
+  scale = input('Would you like to convert to Fahrenheit or Celsius?[F/C] ')
+  scale = scale.upper()
+
+  if scale.upper() == 'C':
+    temp = input('Enter Temperature in Fahrenheit = ')
+    if temp.isnumeric() == True:
+         celsius = round((int(temp)-32)/(5/9))
+         Celsius = str(celsius)
+         print(temp + ' Fahrenheit equals ' + Celsius + ' Celsius')
+
+    else:
+        print('Please enter a number')
+  
+  elif scale.upper() == 'F':
+    temp = input('Enter Temperature in Celcius = ')
+    if temp.isnumeric() == True:
+        fahren = round((int(temp)*(5/9))+32)
+        Fahren = str(fahren)
+        print(temp + ' Celsius equals ' + Fahren + ' Fahrenheit')
+
+    else:
+        print('Please enter a number')
+        
+  else:
+    print('Please enter valid input')
+    
+
+while True:
+  again = input('Would you like to convert another temperature?[Y/N]')
+  again = again.upper()
+  
+  if again == 'Y':
+    tempConvert()
+  elif again.isnumeric() == True:
+    print('Please Enter Valid Input')
+  else:
+    print('Goodbye')
+    break
+  
+
