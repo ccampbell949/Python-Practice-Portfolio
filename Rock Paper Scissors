@@ -4,15 +4,14 @@
 #This is an original script created and writen by Connor Campbell.
 
 
-
-import random #Import random module
-
-options = ['Rock', 'Paper', 'Scissors']#Define options list
-
-compMove = options[random.randint(0,2)] #Computer's move. Choose random index from 'options' list
-
 def rockpaperscissors():
 
+  import random #Import random module
+
+  options = ['Rock', 'Paper', 'Scissors']#Define options list
+
+  compMove = options[random.randint(0,2)] #Computer's move. Choose random index from 'options' list
+  
   print('''Welcome to Connor's Rock, Paper, Scissors Programme!''')
 
   playerMove = input('Please enter either Rock[r], Paper[p] or Scissors[s]')#user move
@@ -34,7 +33,7 @@ def rockpaperscissors():
   else:
       print('Computer has chosen ' + compMove)
       
-      if compMove == 'Rock' and playerMove == 'r': #different win/loss conditions
+      if compMove == 'Rock' and playerMove == 'r': #different win/loss parameters
         print('Draw!')
       elif compMove == 'Rock' and playerMove == 'p':
         print('You Win!')
