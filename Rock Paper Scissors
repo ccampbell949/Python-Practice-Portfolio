@@ -1,0 +1,87 @@
+#Rock Paper Scissors
+
+
+#This is an original script created and writen by Connor Campbell.
+
+
+
+import random #Import random module
+
+options = ['Rock', 'Paper', 'Scissors']#Define options list
+
+compMove = options[random.randint(0,2)] #Computer's move. Choose random index from 'options' list
+
+def rockpaperscissors():
+
+  print('''Welcome to Connor's Rock, Paper, Scissors Programme!''')
+
+  playerMove = input('Please enter either Rock[r], Paper[p] or Scissors[s]')#user move
+
+  playerMove = playerMove.lower()
+  if playerMove.isnumeric() == True: #Has to be a valid input.
+    #(These conditions are used to avoid the programme crashing if a
+    #specified inout is not selected, or selected in error. If Y and N are
+    #defined in the script, and the user enters any other inout, python won't
+    #know what to do with it and the programme will crash)
+    
+      print('Please enter a valid input')
+      rockpaperscissors()
+
+  elif playerMove not in ('r', 'p', 's'): #Has to be a valid input
+      print('Please enter a valid input')
+      rockpaperscissors()
+  
+  else:
+      print('Computer has chosen ' + compMove)
+      
+      if compMove == 'Rock' and playerMove == 'r': #different win/loss conditions
+        print('Draw!')
+      elif compMove == 'Rock' and playerMove == 'p':
+        print('You Win!')
+      elif compMove == 'Rock' and playerMove == 's':
+        print('You Lose!')
+
+      elif compMove == 'Paper' and playerMove == 'r':
+        print('You Lose!')
+      elif compMove == 'Paper' and playerMove == 'p':
+        print('Draw!')
+      elif compMove == 'Paper' and playerMove == 's':
+        print('You Win!')
+          
+      elif compMove == 'Scissors' and playerMove == 'r':
+        print('You Win!')
+      elif compMove == 'Scissors' and playerMove == 'p':
+        print('You Lose!')
+      elif compMove == 'Scissors' and playerMove == 's':
+        print('Draw!')
+
+  again()
+
+def again():
+    import sys
+    selection = ['y', 'n'] 
+    
+    playagain = input('Play Again? [y/n]') #ask user if they want toplay again
+    playagain = playagain.lower()
+
+    if playagain.isnumeric() == True: #Valid input. 
+      print('Please enter a valid input')
+      again()
+  
+    elif playagain not in selection: #Valid input
+      print('Please enter a valid input')
+      again()
+
+    elif playagain == 'y':
+      rockpaperscissors()
+      
+    else:
+      print('Goodbye!')
+      sys.exit() #exit script
+  
+
+while True:
+  rockpaperscissors() #loop programme
+
+
+
