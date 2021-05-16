@@ -1,0 +1,75 @@
+#KPH to mph converter or vice versa
+
+def converter(): #define function converter
+  options = ('1', '2')
+  user = input('What system are you converting from? [1]MPH or [2]KPH?  ')
+
+  if user.isnumeric == False: #checks in input is numeric
+    print('Please enter a valid input [1/2]')
+    converter()
+    
+  elif user not in options: #input must be valid letter
+    print('Please enter a valid input [1/2]')
+    converter()
+
+
+  elif user == options[0]:
+     speed = input('Please enter speed value - ')
+     
+     if speed.isnumeric() ==True: #input must be numeric
+       
+       kph = float(speed)*(8/5) #using float to account for decimals
+       print(str(round((kph),2)) + ' kph' )#round kph value to 2 decimal places
+       again() #run 'again'
+
+     elif speed.isnumeric() == False: #must be numeric
+       print('Please enter numeric value')
+       converter()
+
+     else: #to cover any other inputs which may crash script
+       print('Please try again. Make sure there are no spaces in your number')
+       again()
+
+
+  elif user == options[1]:
+    speed = input('Please enter speed value - ')
+    if speed.isnumeric() ==True:
+       
+       mph = float(speed)*(5/8)
+       print(str(round((mph),2)) + ' mph' )
+       again()
+
+    elif speed.isnumeric() == False:
+       print('Please enter numeric value')
+       converter()
+
+    else:
+       print('Please try again. Make sure there are no spaces in your number')
+       again()
+
+  else:
+     print('Please enter Valid input')
+     converter()
+
+def again():
+  yesno = ('y', 'n')
+  convertagain = input('Would you like to convert another speed? [y/n] ')
+  convertagain = convertagain.lower() #convert inout to lowercase
+
+  if convertagain.isnumeric() == True:
+    print('Please enter a valid input [y/n] ')
+    again()
+
+  elif convertagain not in yesno:
+    print('Please enter a valid input [y/n] ')
+    again()
+    
+  elif convertagain == yesno[0]:
+    converter()
+
+  else:
+    print('Goodbye! ')
+
+converter()
+     
+
